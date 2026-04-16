@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animasiyalı Yazı</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    .text {
+      color: lime;
+      font-size: 40px;
+      text-align: center;
+      width: 80%;
+      animation: glow 1s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px lime;
+      }
+      to {
+        text-shadow: 0 0 30px lime, 0 0 50px green;
+      }
+    }
+
+    .typing {
+      border-right: 3px solid lime;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 8s steps(80, end) forwards, blink 0.7s infinite;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="text">
+<div class="typing">
+  Mənim adım Tofiqdir, mən kompüteri sevirəm və kompüterdə kod yazmaq və ya oyun oynamağı xoşlayıram.
+</div> 
+    </div>
+  </div>
+
+</body>
+</html>
